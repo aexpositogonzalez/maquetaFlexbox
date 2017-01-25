@@ -1,0 +1,207 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	background:#fafafa;
+	width:85%;
+	margin:auto;
+
+	/* Estilos de Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
+
+body {
+	font-family: verdana, helvetica, sans-serif;
+	background:#dadada;
+	color:#676767;
+}
+
+h1,h2, h3 {color:#444442;}
+h1 {font-size: 36px;}
+h2 {font-size: 20px;}
+
+ul li{
+	list-style: none;
+	margin-left: 20px;
+}
+
+header {
+	background:#000000;
+	width:100%;
+	padding:30px;
+
+	/* Estilos de Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+header .logo {
+	color:#C02A2E;
+	font-size:20px;
+}
+
+header .logo a {
+	color:#C02A2E;
+	text-decoration: none;
+	line-height:50px;
+}
+
+header .logo a img {
+	vertical-align: top;
+	max-width: 60px;
+}
+
+header nav {
+	width:50%;
+	/* Estilos de Flexbox */
+
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+header nav a {
+	border: 1px solid #C02A2E;
+	color:#8EC045;
+	text-align: center;
+	text-decoration: none;
+	padding:10px 5px;
+
+	/* Estilos de Flexbox */
+	flex-grow:1;
+}
+
+
+
+.principal {
+	padding:20px;
+
+	flex:1 1 60%;
+}
+
+.principal article {
+	margin: 10px;
+}
+
+.principal article img {
+	width: 100%;
+}
+
+.principal article .lateral {
+	/* Estilos de Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
+
+.principal article .lateral img{
+	flex:1 1 30%;
+	padding: 10px;
+}
+.principal article .lateral p{
+	flex:1 1 70%;
+	padding: 0px;
+}
+
+aside {
+	background:#8EC045;
+	padding:20px;
+
+
+	/* Estilos de Flexbox*/
+	flex:1 1 40%;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
+aside .widget {
+	background: #F9AF3C;
+	margin:10px;
+	padding: 10px;
+}
+
+aside .widget p{
+	margin:10px;
+}
+
+aside .widget p a.linkedin {
+	padding: 5px 10px;
+	background: #0077B5;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer {
+	background:#000000;
+	width: 100%;
+	padding:20px;
+
+	/*  Estilos de Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: flex-end;
+}
+
+footer .redes a {
+	color:#8EC045;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+	border: 1px solid #C02A2E;
+}
+
+
+header nav a:hover, footer .redes a:hover  {
+	background:#F9AF3C;
+	color: #ffffff;
+}
+
+
+
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}
